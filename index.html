@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    // Redirect all unknown paths to index.html
+    window.location.replace("/");
+  </script>
+
+
+  <title>Guarantee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    form {
+      display: none;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 10px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="heroImage" src="" alt="Product image" />
+
+  <form
+    id="guaranteeForm"
+    action="https://formspree.io/f/mpwvnkpa"
+    method="POST"
+  >
+    <!-- Hidden slug field -->
+    <input type="hidden" name="landing_slug" id="landingSlug" />
+
+    <label>
+      Name
+      <input type="text" name="name" required />
+    </label>
+
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+
+    <label>
+      Phone
+      <input type="text" name="phone" />
+    </label>
+
+    <label>
+      Address
+      <textarea name="address" rows="3"></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
